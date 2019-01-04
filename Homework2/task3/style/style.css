@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 15%;
+    background-color: tomato;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.sidebar {
+    position: fixed;
+    width: 10%;
+    height: 600px;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.tabular {
+    position: relative;
+    margin-top: 100%;
+    margin-left: 20%;
+}
+
+.block {
+    position: relative;
+    margin-left: 20%;
+}
+
+.task2 {
+    position: relative;
+    margin-left: 20%;
+}
+
+.tabular a {
+    color: tomato;
+}
+
+.block a {
+    color: tomato;
+}
+
+.task2 a {
+    color: tomato;
+}
+
+.centralblock {
+    position: absolute;
+    background-color: blue;
+    margin-top: 10%;
+    margin-left: 25%;
+    height: 50%;
+    width: 50%;
+}
+
+.list {
+    position: relative;
+    left: 20%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 15%;
+    background-color: tomato;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.footer {
+    position: relative;
+    top: 50%;
+    left: 10%;
+}
