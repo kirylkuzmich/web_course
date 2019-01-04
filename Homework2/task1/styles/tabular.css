@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
+}
+
 body {
-      width: 100vw;
-      height: 100vh;
-  }
+    width: 100vw;
+    height: 100vh;
+}
 
 table {
     width: 100%;
@@ -19,21 +19,22 @@ td {
     border: 3px solid white;
 }
 
-  .row1 {
-      background-color: orange;
-      width: 50%;
-  }
+.row1 {
+    background-color: orange;
+    width: 50%;
+}
 
-  .row2 {
-      background-color: yellow;
-      width: 100%;
-  }
+.row2 {
+    background-color: yellow;
+    width: 100%;
+}
 
-  .row3 {
-      background-color: cornflowerblue;
-      width: 33.3%;
-  }
+.row3 {
+    background-color: cornflowerblue;
+    width: 33.3%;
+}
 
-  .row4 {
-      background-color: darkgrey;
-  }
+.row4 {
+    background-color: darkgrey;
+    width: 25%;
+}

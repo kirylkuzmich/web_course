@@ -5,34 +5,34 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .row1 {
-    display: inline-block;
-    width: 49vw;
-    height: 20vh;
-    background-color: orange;
-  }
+  display: inline-block;
+  width: 49vw;
+  height: 20vh;
+  background-color: orange;
+}
 
 .row2 {
-    display: inline-block;
-    width: 98vw;
-    height: 40vh;
-    background-color: yellow; 
-  }
+  display: inline-block;
+  width: 98vw;
+  height: 40vh;
+  background-color: yellow;
+}
 
 .row3 {
-    display: inline-block;
-    width: 32.6vw;
-    height: 19vh;
-    background-color: cornflowerblue; 
-  }
+  display: inline-block;
+  width: 32.6vw;
+  height: 19vh;
+  background-color: cornflowerblue;
+}
 
 .row4 {
-    display: inline-block;
-    width: 24.4vw;
-    height: 19vh;
-    background-color: rgb(100, 100, 98); 
-  }
+  display: inline-block;
+  width: 24.4vw;
+  height: 19vh;
+  background-color: rgb(100, 100, 98);
+}
