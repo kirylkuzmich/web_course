@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-content: flex-start;
+    height: 100%;
+    flex-flow: wrap;
+}
+
+.container>div {
+    margin: 0.5%;
+}
+
+@media (min-width: 1920px) {
+    .block1 {
+        background-color: red;
+        height: 15%;
+        width: 30%;
+    }
+
+    .block2 {
+        background-color: orange;
+        height: 15%;
+        width: 68%;
+    }
+
+    .block3 {
+        background-color: green;
+        height: 45%;
+        width: 100%;
+    }
+
+    .block4 {
+        background-color: burlywood;
+        height: 30%;
+        width: 32.3%;
+    }
+
+    .block5 {
+        background-color: blue;
+        height: 30%;
+        width: 32.3%;
+    }
+
+    .block6 {
+        background-color: purple;
+        height: 30%;
+        width: 32.3%;
+    }
+}
+
+@media (min-width: 768px) {
+    .block1 {
+        background-color: orange;
+        height: 15%;
+        width: 30%;
+    }
+
+    .block2 {
+        background-color: purple;
+        height: 15%;
+        width: 68%;
+    }
+
+    .block3 {
+        background-color: red;
+        height: 48%;
+        width: 100%;
+    }
+
+    .block4 {
+        background-color: green;
+        height: 30%;
+        width: 49%;
+    }
+
+
+    .block5 {
+        background-color: blue;
+        height: 30%;
+        width: 49%;
+    }
+
+    .block6 {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .block1 {
+        background-color: green;
+        height: 15%;
+        flex-basis: 99%;
+    }
+
+    .block2 {
+        background-color: purple;
+        height: 15%;
+        width: 99%;
+    }
+
+    .block3 {
+        background-color: red;
+        height: 67%;
+        width: 99%;
+    }
+
+    .block4 {
+        display: none;
+    }
+
+
+    .block5 {
+        display: none;
+    }
+
+    .block6 {
+        display: none;
+    }
+}

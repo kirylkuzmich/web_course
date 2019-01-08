@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
@@ -71,7 +71,7 @@ header {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0%;
     margin-left: 5%;
     margin-right: 5%;
@@ -82,8 +82,8 @@ footer {
     border-top-right-radius: 50%;
 }
 
-.footer {
+.footer-text {
     position: relative;
     top: 50%;
-    left: 10%;
+    left: 1%;
 }
