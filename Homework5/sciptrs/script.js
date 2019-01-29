@@ -1,110 +1,127 @@
-function Worker(first, last, age, speciality, experience, salary, gender) {
-    var name       = {
-        'first': first,
-        'last' : last
-    }; 
-    var age        = age;
+function Worker(firstName, lastName, age, speciality, experience, salary, gender) {
+    
+    var name = {
+        'firstName': firstName,
+        'lastName': lastName
+    };
+
+    var age = age;
     var speciality = speciality;
     var experience = experience;
-    var salary     = salary;
-    var gender     = gender;
+    var salary = salary;
+    var gender = gender;
+
+
+    this.setName = function (firstName, lastName) {
+        name['firstName'] = firstName;
+        name['lastName'] = lastName;
+    }
 
     this.getName = function(){
-        return this.name;
+        return name['firstName'] + ' ' + name['lastName'];
     }
 
-    this.setName = function(first, second){
-        this.name.first  = first;
-        this.name.second = second;
+    this.setAge = function (value) {
+        age = value;
     }
 
-    this.getAge = function(){
-        return this.age;
+    this.getAge = function () {
+        return age;
     }
 
-    this.setAge = function(value){
-        this.age = value;
+    this.setSpeciality = function (value) {
+        speciality = value;
     }
 
-    this.getSpeciality = function(){
-        return this.speciality;
+    this.getSpeciality = function () {
+        return speciality;
     }
 
-    this.setSpeciality = function(value){
-        this.speciality = value;
+    this.setExperience = function (value) {
+        experience = value;
     }
 
-    this.getExperience = function(){
-        return this.experience;
+    this.getExperience = function () {
+        return experience;
     }
 
-    this.setExperience = function(value){
-        this.experience = value;
+    this.setSalary = function (value) {
+        salary = value;
     }
 
-    this.getSalary = function(){
-        return this.salary;
+    this.getSalary = function () {
+        return salary;
     }
 
-    this.setSalary = function(value){
-        this.salary = value;
+    this.setGender = function (value) {
+        gender = value;
     }
 
-    this.getGender = function(){
-        return this.gender;
+    this.getGender = function () {
+        return gender;
     }
 
-    this.setGender = function(value){
-        this.gender = value;
+    this.toString = function () {
+        return 'Name: ' + name['firstName'] + ' ' + name['lastName'] + '\nAge: ' + age +
+            '\nSpeciality: ' + speciality + '\nExperience: ' + experience +
+            '\nSalary: ' + salary + '\nGender: ' + gender;
     }
+}
 
-    this.toString = function(){
-        return 'Name: ' + name.first + ' ' + name.second + '/nAge: ' + age +
-                +'/nSpeciality: ' + speciality + '/nExperience: ' + experience +
-                +'/nSalary: ' + salary + '/nGender: ' + gender;
-    }
-  }
-
-  function FactoryWorker(first, last, age, speciality, experience, salary, gender, workerTool) {
+function FactoryWorker(first, last, age, speciality, experience, salary, gender, workerTool) {
     Worker.apply(this, arguments);
     var workerTool = workerTool;
 
-    this.getWorkerTool = function(){
-        return this.workerTool;
+    this.setWorkerTool = function (value) {
+        workerTool = value;
     }
 
-    this.setWorkerTool = function(value){
-        this.workerTool = value;
+    this.getWorkerTool = function () {
+        return workerTool;
     }
 
     toStringParent = this.toString;
-    this.toString = function(){
-        return toStringParent() + "\nWorker's Tool: " + workerTool;
+    this.toString = function () {
+        return toStringParent() + "\nWorker's Tool: " + this.workerTool;
     }
-  }
+}
 
-  function TransportWorker(first, last, age, speciality, experience, salary, gender, workerTransport) {
+function TransportWorker(first, last, age, speciality, experience, salary, gender, workerTransport) {
     Worker.apply(this, arguments);
     var workerTransport = workerTransport;
 
-    this.getWorkerTransport = function(){
-        return this.workerTransport;
+    this.setWorkerTransport = function (value) {
+        workerTransport = value;
     }
 
-    this.setWorkerTransport = function(value){
-        this.workerTransport = value;
+    this.getWorkerTransport = function () {
+        return workerTransport;
     }
 
     toStringParent = this.toString;
-    this.toString = function(){
+    this.toString = function () {
         return toStringParent() + "\nWorker's Transport: " + workerTransport;
     }
-  }
+}
 
-  function onCreateWorker(){
-  var worker = new TransportWorker();
-  var firstName = document.getElementById('firstName');
-  var secondName = document.getElementById('secondName'); 
-  var age = document.getElementById('age'); 
-  worker.setName()
-  }
+function onCreateWorker() {
+    var worker = new TransportWorker();
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var age = document.getElementById('age').value;
+    var speciality = document.getElementById('speciality').value;
+    var experience = document.getElementById('experience').value;
+    var salary = document.getElementById('salary').value;
+    var gender = document.getElementById('gender').value;
+    var workerTransport = document.getElementById('workerTransport').value;
+
+    worker.setName(firstName, lastName);
+    worker.setAge(age);
+    worker.setSpeciality(speciality);
+    worker.setExperience(experience);
+    worker.setSalary(salary);
+    worker.setGender(gender);
+    worker.setWorkerTransport(workerTransport);
+
+    alert(worker.toString());
+}
